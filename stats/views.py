@@ -5,7 +5,7 @@ from products.models import Product
 
 class ProductsByBrandView(APIView):
     def get(self, request):
-        rows = (Product.objects.values("brand").annotate(total=Count("id")).order_by("-total"))
+        rows = (Product.objects.values("brand").annotate(total=Count("id")).order_by("brand"))
 
         return Response({
             "labels": [r["brand"] for r in rows], 
