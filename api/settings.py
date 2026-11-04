@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users',
     'products',
+    'stats',
     'rest_framework',
     'corsheaders',
 ]
@@ -83,10 +84,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
         'PASSWORD': 'taller3123123**',
-        'HOST': 'aws-1-us-west-2.pooler.supabase.com',
+        'HOST': 'aws-0-us-east-1.pooler.supabase.com',
         'PORT': 5432,
         'DATABASE': 'postgres',
-        'USER': 'postgres.nikzwamrpzysalourqwe',
+        'USER': 'postgres.cuxgbvxqimrxdgjmvire',
     }
 }
 
