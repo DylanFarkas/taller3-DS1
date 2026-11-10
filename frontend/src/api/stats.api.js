@@ -1,21 +1,21 @@
 import axios from "axios";
 
 export const api = axios.create({
-    baseURL: "http://localhost:8000/api/v1/stats/",
+    baseURL: import.meta.env.VITE_API_URL,
 })
 
 export const getProductsByBrand = async () => {
-    return await api.get("products-by-brand/");
+    return await api.get("/stats/products-by-brand/");
 }
 
 export const getProductsByCategory = async () => {
-    return await api.get("products-by-category/");
+    return await api.get("/stats/products-by-category/");
 }
-
+    
 export const getProductsByPriceRange = async () => {
-    return await api.get("products-by-price-range/");
+    return await api.get("/stats/products-by-price-range/");
 }
 
 export const getProductsByStockRange = async () => {
-    return await api.get("products-by-stock-range/");
+    return await api.get("/stats/products-by-stock-range/");
 }
