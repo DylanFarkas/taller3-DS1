@@ -141,8 +141,4 @@ MAILERS = {
     },
 }
 
-CORS_ALLOWED_ORIGINS = [
-    os.environ["CORS_ALLOWED_ORIGINS"],
-    
-    'http://localhost:5173',
-]
+CORS_ALLOWED_ORIGINS = os.environ["CORS_ALLOWED_ORIGINS"].split(",")
